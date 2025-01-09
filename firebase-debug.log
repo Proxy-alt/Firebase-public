@@ -1,0 +1,41 @@
+[debug] [2025-01-09T01:15:10.017Z] ----------------------------------------------------------------------
+[debug] [2025-01-09T01:15:10.020Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Eli\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-01-09T01:15:10.020Z] CLI Version:   13.29.1
+[debug] [2025-01-09T01:15:10.020Z] Platform:      win32
+[debug] [2025-01-09T01:15:10.020Z] Node Version:  v20.18.0
+[debug] [2025-01-09T01:15:10.020Z] Time:          Wed Jan 08 2025 20:15:10 GMT-0500 (Eastern Standard Time)
+[debug] [2025-01-09T01:15:10.021Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-09T01:15:10.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-09T01:15:10.028Z] > authorizing via signed-in user (mr.eli.pires@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Eli\Firebase-public
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-01-09T01:15:30.496Z] Checked if tokens are valid: true, expires at: 1736388695256
+[debug] [2025-01-09T01:15:30.496Z] Checked if tokens are valid: true, expires at: 1736388695256
+[debug] [2025-01-09T01:15:30.497Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-01-09T01:15:30.497Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"url-redirector","name":"url-redirector"}
+[debug] [2025-01-09T01:15:30.744Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2025-01-09T01:15:30.744Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2025-01-09T01:15:30.802Z] FirebaseError: Request to https://cloudresourcemanager.googleapis.com/v1/projects had HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\Eli\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\Eli\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID url-redirector. Please try again with a unique project ID.
